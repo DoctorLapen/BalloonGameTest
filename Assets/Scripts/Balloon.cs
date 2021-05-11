@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace BalloonGameTest
 {
     public class Balloon : MonoBehaviour
     {
+        public event Action BalloonDestroyed;
+
         [SerializeField]
         private Rigidbody2D _rb;
         [SerializeField]
@@ -16,7 +20,8 @@ namespace BalloonGameTest
         private float _minYForce;
         [SerializeField]
         private float _maxYForce;
-
+        
+        private ScoreCounter _scoreCounter;
 
         private void Start()
         {
@@ -27,7 +32,17 @@ namespace BalloonGameTest
 
         private void OnMouseDown()
         {
+            BalloonDestroyed?.Invoke();
             Destroy(gameObject);
+        }
+        public void SubscribeCounter(ScoreCounter scoreCounter)
+        {
+            _scoreCounter = scoreCounter;
+            BalloonDestroyed += scoreCounter.AddScore;
+        }
+        public void OnDisable()
+        {
+            BalloonDestroyed -= _scoreCounter.AddScore;
         }
     }
 }

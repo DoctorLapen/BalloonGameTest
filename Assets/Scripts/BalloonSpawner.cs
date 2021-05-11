@@ -8,7 +8,9 @@ namespace BalloonGameTest
     {
         private const float SPAWN_DELAY = 1f;
         [SerializeField]
-        private GameObject[] _balloonPrefabs;
+        private Balloon[] _balloonPrefabs;
+        [SerializeField]
+        private ScoreCounter _scoreCounter;
         [SerializeField]
         private float _spawnSpeed;
         private float _t;
@@ -26,8 +28,9 @@ namespace BalloonGameTest
             if (_t > SPAWN_DELAY)
             {
                 int newBalloonIndex = (int)Random.Range(_minBallonIndex, _maxBallonIndex);
-                GameObject newBalloon = _balloonPrefabs[newBalloonIndex];
-                Instantiate(newBalloon,transform.position,Quaternion.identity);
+                Balloon newBalloon = _balloonPrefabs[newBalloonIndex];
+                Balloon spawnedBalloon = Instantiate(newBalloon,transform.position,Quaternion.identity);
+                spawnedBalloon.SubscribeCounter(_scoreCounter);
                 _t = 0;
             }
             _t += Time.deltaTime * _spawnSpeed;
