@@ -118,7 +118,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1840add108636f248b81422144cc4e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 703321814204720707}
+  _rb: {fileID: 703321814204720707}
+  _minXForce: -50
+  _maxXForce: 50
+  _minYForce: 150
+  _maxYForce: 250
 --- !u!70 &703321814204720706
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -132,6 +136,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00646599, y: 3.4787815}
-  m_Size: {x: 5.3780975, y: 7.4662333}
+  m_Offset: {x: 0.006466031, y: 0.95328236}
+  m_Size: {x: 1.4104388, y: 1.7453709}
   m_Direction: 0
