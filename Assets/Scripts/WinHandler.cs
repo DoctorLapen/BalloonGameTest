@@ -24,6 +24,7 @@ namespace BalloonGameTest
             if (_scoreToWin == score)
             {
                 _winUI.gameObject.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
     }

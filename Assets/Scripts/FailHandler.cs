@@ -25,6 +25,7 @@ namespace BalloonGameTest
                 if (_deletedBalloons + _scoreCounter.Score == _balloonSpawner.BalloonsTotalAmount) 
                 {
                     _failPanel.gameObject.SetActive(true);
+                    Time.timeScale = 0f;
                 }
             }
         }

@@ -20,7 +20,11 @@ namespace BalloonGameTest
         private float _minYForce;
         [SerializeField]
         private float _maxYForce;
-        
+        [SerializeField]
+        private SpriteRenderer _spriteRenderer;
+        [SerializeField]
+        private GameObject _explovise;
+
         private ScoreCounter _scoreCounter;
 
         private void Start()
@@ -33,7 +37,9 @@ namespace BalloonGameTest
         private void OnMouseDown()
         {
             BalloonDestroyed?.Invoke();
-            Destroy(gameObject);
+            _spriteRenderer.enabled = false;
+            _explovise.SetActive(true);
+            Destroy(gameObject,0.25f);
         }
         public void SubscribeCounter(ScoreCounter scoreCounter)
         {
