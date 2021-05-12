@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 703321814204720704}
   - component: {fileID: 703321814204720705}
   - component: {fileID: 703321814204720707}
-  - component: {fileID: 703321814204720711}
   - component: {fileID: 703321814204720706}
+  - component: {fileID: 1533239915249241889}
+  - component: {fileID: 5457636893913935646}
+  - component: {fileID: 5407401434720838789}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Balloon
@@ -107,25 +109,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &703321814204720711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703321814204720732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1840add108636f248b81422144cc4e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rb: {fileID: 703321814204720707}
-  _minXForce: -20
-  _maxXForce: 20
-  _minYForce: 350
-  _maxYForce: 450
-  _spriteRenderer: {fileID: 703321814204720705}
-  _explovise: {fileID: 5359312802758978164}
 --- !u!70 &703321814204720706
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -142,6 +125,51 @@ CapsuleCollider2D:
   m_Offset: {x: 0.006466031, y: 0.95328236}
   m_Size: {x: 1.4104388, y: 1.7453709}
   m_Direction: 0
+--- !u!114 &1533239915249241889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703321814204720732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521d5338cd316414384b27a2113a485c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5457636893913935646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703321814204720732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d319de4d23793a544a0fcbbe7e2b1a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 703321814204720707}
+  _minXForce: -20
+  _maxXForce: 20
+  _minYForce: 550
+  _maxYForce: 650
+--- !u!114 &5407401434720838789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703321814204720732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b57a8c8738aa3cb47879a1d692862960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _balloonClickHandler: {fileID: 1533239915249241889}
+  _spriteRenderer: {fileID: 703321814204720705}
+  _explosion: {fileID: 5359312802758978164}
+  _explosionTime: 0.25
 --- !u!1001 &5849950096017307898
 PrefabInstance:
   m_ObjectHideFlags: 0

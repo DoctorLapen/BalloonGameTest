@@ -18,7 +18,7 @@ namespace BalloonGameTest
             _text.text = $"{ _startText } / { _endGameHandler.ScoreToWin }";
         }
 
-        public void UpdateText(int score) 
+        public void UpdateText(int score)
         {
             _text.text = $"{ score } / { _endGameHandler.ScoreToWin }";
         }

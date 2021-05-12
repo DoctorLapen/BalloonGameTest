@@ -7,7 +7,7 @@ namespace BalloonGameTest
     {
         private const float SPAWN_DELAY = 1f;
         [SerializeField]
-        private Balloon[] _balloonPrefabs;
+        private BalloonClickHandler[] _balloonPrefabs;
         [SerializeField]
         private ScoreCounter _scoreCounter;
         [SerializeField]
@@ -35,15 +35,14 @@ namespace BalloonGameTest
             if (_t > SPAWN_DELAY && _balloonsTotalAmount > _spawnedBalloons)
             {
                 int newBalloonIndex = (int)Random.Range(_minBallonIndex, _maxBallonIndex);
-                Balloon newBalloon = _balloonPrefabs[newBalloonIndex];
+                BalloonClickHandler newBalloon = _balloonPrefabs[newBalloonIndex];
                 Vector3 balloonPosition = transform.position;
                 balloonPosition.x += Random.Range(-_spawnRadius, _spawnRadius);
-                Balloon spawnedBalloon = Instantiate(newBalloon, balloonPosition, Quaternion.identity);
+                BalloonClickHandler spawnedBalloon = Instantiate(newBalloon, balloonPosition, Quaternion.identity);
                 spawnedBalloon.SubscribeCounter(_scoreCounter);
                 _t = 0;
                 _spawnedBalloons++;
                 _spawnSpeed += _increaseSpawnSpeedStep;
-                Debug.Log(_spawnSpeed);
             }
             _t += Time.deltaTime * _spawnSpeed;
         }

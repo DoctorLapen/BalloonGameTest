@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 342751253}
   - component: {fileID: 342751252}
   m_Layer: 0
-  m_Name: Static Sprite (1)
+  m_Name: Wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342751251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.9, y: 1.6, z: 0}
+  m_LocalPosition: {x: 4.68, y: 1.6, z: -1}
   m_LocalScale: {x: 1.6511905, y: 16.768147, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -528,12 +528,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _balloonPrefabs:
-  - {fileID: 2784289880852450750, guid: 15b5ee10027140c498b2e0e01ace29a4, type: 3}
-  - {fileID: 6513135388455738532, guid: 26ecb2a1e674ff54a89130ac9d08888b, type: 3}
-  - {fileID: 866346202860389944, guid: d47c7038ee7fc51498b6c125902d80c0, type: 3}
-  - {fileID: 1361580475002046628, guid: 01ae05cd724fc9745b2f24ee734335ab, type: 3}
+  - {fileID: 4190126697468257496, guid: 15b5ee10027140c498b2e0e01ace29a4, type: 3}
+  - {fileID: 5109004758454842818, guid: 26ecb2a1e674ff54a89130ac9d08888b, type: 3}
+  - {fileID: 1189086275720032094, guid: d47c7038ee7fc51498b6c125902d80c0, type: 3}
+  - {fileID: 1036061940688871874, guid: 01ae05cd724fc9745b2f24ee734335ab, type: 3}
   _scoreCounter: {fileID: 1222236929}
-  _spawnSpeed: 0.2
+  _spawnSpeed: 0.4
   _spawnRadius: 3.5
   _increaseSpawnSpeedStep: 0.05
   _balloonsTotalAmount: 20
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 1037917555}
   - component: {fileID: 1037917554}
   m_Layer: 0
-  m_Name: Static Sprite
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -738,7 +738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037917553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6729, y: 1.6407, z: 0}
+  m_LocalPosition: {x: -4.6729, y: 1.6407, z: -1}
   m_LocalScale: {x: 1.6511905, y: 16.768147, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -834,7 +834,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreView: {fileID: 1663941348}
-  _scoreStep: 1
 --- !u!1 &1240442495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1019,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395159197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1246, y: 9.9, z: 0}
+  m_LocalPosition: {x: -0.1246, y: 11.64, z: 0}
   m_LocalScale: {x: 7.6810055, y: 3.218704, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1148,7 +1147,7 @@ GameObject:
   - component: {fileID: 1808250558}
   - component: {fileID: 1808250557}
   m_Layer: 0
-  m_Name: DustyBackground
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1214,7 +1213,7 @@ Transform:
   m_GameObject: {fileID: 1808250556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.460182, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
