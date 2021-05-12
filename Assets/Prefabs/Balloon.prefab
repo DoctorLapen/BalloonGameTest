@@ -119,9 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 703321814204720707}
-  _minXForce: -50
-  _maxXForce: 50
-  _minYForce: 150
+  _minXForce: -20
+  _maxXForce: 20
+  _minYForce: 350
   _maxYForce: 450
 --- !u!70 &703321814204720706
 CapsuleCollider2D:

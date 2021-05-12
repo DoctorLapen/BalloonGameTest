@@ -13,6 +13,10 @@ namespace BalloonGameTest
         [SerializeField]
         private float _spawnSpeed;
         [SerializeField]
+        private float _spawnRadius;
+        [SerializeField]
+        private float _increaseSpawnSpeedStep;
+        [SerializeField]
         private int _balloonsTotalAmount;
         public int BalloonsTotalAmount => _balloonsTotalAmount;
         private float _t;
@@ -32,10 +36,14 @@ namespace BalloonGameTest
             {
                 int newBalloonIndex = (int)Random.Range(_minBallonIndex, _maxBallonIndex);
                 Balloon newBalloon = _balloonPrefabs[newBalloonIndex];
-                Balloon spawnedBalloon = Instantiate(newBalloon,transform.position,Quaternion.identity);
+                Vector3 balloonPosition = transform.position;
+                balloonPosition.x += Random.Range(-_spawnRadius, _spawnRadius);
+                Balloon spawnedBalloon = Instantiate(newBalloon, balloonPosition, Quaternion.identity);
                 spawnedBalloon.SubscribeCounter(_scoreCounter);
                 _t = 0;
                 _spawnedBalloons++;
+                _spawnSpeed += _increaseSpawnSpeedStep;
+                Debug.Log(_spawnSpeed);
             }
             _t += Time.deltaTime * _spawnSpeed;
         }
