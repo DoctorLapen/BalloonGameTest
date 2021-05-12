@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 703321814204720706}
   m_Layer: 0
   m_Name: Balloon
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   _minXForce: -50
   _maxXForce: 50
   _minYForce: 150
-  _maxYForce: 250
+  _maxYForce: 450
 --- !u!70 &703321814204720706
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

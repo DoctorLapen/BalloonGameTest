@@ -24,6 +24,7 @@ namespace BalloonGameTest
                 ScoreUpdated?.Invoke(_score);  
             }
         }
+
         private int _score;
         
         private void Start()

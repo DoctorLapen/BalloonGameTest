@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,20 +10,17 @@ namespace BalloonGameTest
         private Text _text;
         [SerializeField]
         private string _startText;
+        [SerializeField]
+        private WinHandler _endGameHandler;
 
         private void Start()
         {
-            _text.text = _startText;
+            _text.text = $"{ _startText } / { _endGameHandler.ScoreToWin }";
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
         public void UpdateText(int score) 
         {
-            _text.text = score.ToString();
+            _text.text = $"{ score } / { _endGameHandler.ScoreToWin }";
         }
     }
 }
